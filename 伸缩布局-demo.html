@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: #ccc;
+        }
+        *{
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+        ul{
+            width: 600px;
+            height: 80px;
+            /*border: 1px solid #000;*/
+            margin: 100px auto;
+            /*伸缩布局*/
+            display: flex;
+        }
+        li{
+            background-color: deepskyblue;
+            margin: 0 2px;
+
+            text-align: center;
+            line-height: 80px;
+            color: #fff;
+            font-size: 30px;
+
+            /*子盒子伸缩比例*/
+            flex: 1;
+
+            cursor: pointer;
+        }
+        li:hover{
+            background-color: orange;
+        }
+/*******************分割线******************/
+        .layout{
+            width: 600px;
+            height: 800px;
+            border: 1px solid #000;
+            margin: 0 auto;
+            /*伸缩布局*/
+            display: flex;
+            /*主轴方向*/
+            flex-direction: column;
+        }
+
+        .header{
+            background-color: red;
+            flex: 1;
+        }
+        .main{
+            background-color: green;
+            flex: 5;
+
+            display: flex;
+        }
+        .left{
+            flex: 1;
+            background-color: orange;
+        }
+        .right{
+            flex: 3;
+            background-color: deepskyblue;
+        }
+        .footer{
+            background-color: #000;
+            flex: 1;
+        }
+    </style>
+</head>
+<body>
+    <ul>
+        <li>首页</li>
+        <li>图片</li>
+        <li>视频</li>
+        <li>地图</li>
+        <li>知道</li>
+    </ul>
+    <div class="layout">
+        <!--头-->
+        <div class="header"></div>
+        <!--内容-->
+        <div class="main">
+            <div class="left"></div>
+            <div class="right"></div>
+        </div>
+        <!--底部-->
+        <div class="footer"></div>
+    </div>
+</body>
+</html>
